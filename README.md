@@ -30,7 +30,7 @@ In this quick quide you will make universal cocoa touch framework which creates 
 
 <h5>Making Archive</h5> If you removed put back [ ${CONFIGURATION} = “Debug”] then” on start and “fi” at end of script OR comment all script!.
 
-<h5>Path to Archive framework</h5> /DerivedData//Build/Intermediates /ArchiveIntermediates /{ProjectName} /IntermediateBuildFilesPath/ UninstalledProducts /Release-iphoneos
+<h5>Path to Archive framework</h5>/DerivedData//Build/Intermediates /ArchiveIntermediates /{ProjectName} /IntermediateBuildFilesPath/ UninstalledProducts /Release-iphoneos
 
 </h5>Importing universal framework to app project </h5> Drag universial framework file /DerivedData/{ProjectName}/Build/Products/ Debug-universal/ZDFramework.framework inside App project. 2. Select project main target
 
