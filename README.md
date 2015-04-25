@@ -3,6 +3,8 @@
 In 2015 AppStore has changed rules. Fat/Universal binaries(binary with Simulator(i386,x86_64) and Device(armv7,armv7s,arm64) are no longer passing validation!. Your app must contain framework with only “Release” Device arhitectures.
 Because of this script makes FAT binary only for develop configuration.(If you want also for release see below)
 
+![alt tag](https://github.com/zdrole/ZDFatCocoaTouchFramework/blob/master/CocoaTouchFramework.png)
+
 
 <h5>1. Quick option - already created </h5>
  -Check example and just rename project to whatever ...
