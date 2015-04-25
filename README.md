@@ -11,10 +11,10 @@ Because of this script makes FAT binary only for develop configuration.(If you w
 
 
 <h5>2. Create with quide </h5>
-In this quick quide you will make universal cocoa touch framework which creates fat build for develop configuraton and is compatible with Xcode 6 and iOS 8. (For release see below)
+In this quick quide you will make universal cocoa touch framework which creates fat build for develop configuraton and is compatible with Xcode 6 and iOS 8. (For release see below)</br>
 <b>IMPORTANT</b>: In Xcode always select Simulator and run, script will make Device and Universal build behind the scenes.(If Device is selected script fails because of “Code=53 Simulator verification failed” error in xcodebuild command. Until Apple don’t fix this issue just build with simulator! )
 
-Open Xcode and create fresh Cocoa Touch Framework.
+1.Open Xcode and create fresh Cocoa Touch Framework.
 In project navigator select project / file (menu bar) / project settings / change derived data location to Project-relative with name DerivedData
 Select project / build settings / Build Active Architecture = NO
 Select project / build settings / Arhitectures / Other/ + / add armv7s . Old post : goo.gl/bnKWB5
