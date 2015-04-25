@@ -1,4 +1,4 @@
-Build FAT Cocoa Touch Framework at once. (Script with quide + Example )
+<h5>Build FAT Cocoa Touch Framework at once. (Script with quide + Example )</h5>
 
 In 2015 AppStore has changed rules. Fat/Universal binaries(binary with Simulator(i386,x86_64) and Device(armv7,armv7s,arm64) are no longer passing validation!. Your app must contain framework with only “Release” Device arhitectures.
 Because of this script makes FAT binary only for develop configuration.(If you want also for release see below)
@@ -6,13 +6,13 @@ Because of this script makes FAT binary only for develop configuration.(If you w
 
 
 
-1. Quick option 
+<h5>1. Quick option </h5>
  -Check example and just rename project to whatever ...
 
 
-<h3>2. Create with quide <h3>
+<h5>2. Create with quide </h5>
 In this quick quide you will make universal cocoa touch framework which creates fat build for develop configuraton and is compatible with Xcode 6 and iOS 8. (For release see below)
-IMPORTANT: In Xcode always select Simulator and run, script will make Device and Universal build behind the scenes.(If Device is selected script fails because of “Code=53 Simulator verification failed” error in xcodebuild command. Until Apple don’t fix this issue just build with simulator! )
+<b>IMPORTANT</b>: In Xcode always select Simulator and run, script will make Device and Universal build behind the scenes.(If Device is selected script fails because of “Code=53 Simulator verification failed” error in xcodebuild command. Until Apple don’t fix this issue just build with simulator! )
 
 Open Xcode and create fresh Cocoa Touch Framework.
 In project navigator select project / file (menu bar) / project settings / change derived data location to Project-relative with name DerivedData
