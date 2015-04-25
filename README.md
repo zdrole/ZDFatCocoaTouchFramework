@@ -26,13 +26,13 @@ In this quick quide you will make universal cocoa touch framework which creates 
 
 7. Select project /main target / run script and paste code from ZDFrameworkXcodeScript.sh script – currently this script is executed only when configration=Debug , If you want to make universal Release framework delete [ ${CONFIGURATION} = “Debug”] then” on start and “fi” at end of code. When Making release version via Archive add back this case or comment all script =).
 
-Framework Build Folder path</h5> Path to Universal,device,simulator frameworks: /DerivedData/{ProjectName}/Build/Products/
+<h5>Framework Build Folder path</h5> Path to Universal,device,simulator frameworks: /DerivedData/{ProjectName}/Build/Products/
 
-Making Archive: If you removed put back [ ${CONFIGURATION} = “Debug”] then” on start and “fi” at end of script OR comment all script!.
+<h5>Making Archive</h5> If you removed put back [ ${CONFIGURATION} = “Debug”] then” on start and “fi” at end of script OR comment all script!.
 
-Path to Archive framework: /DerivedData//Build/Intermediates /ArchiveIntermediates /{ProjectName} /IntermediateBuildFilesPath/ UninstalledProducts /Release-iphoneos
+<h5>Path to Archive framework</h5> /DerivedData//Build/Intermediates /ArchiveIntermediates /{ProjectName} /IntermediateBuildFilesPath/ UninstalledProducts /Release-iphoneos
 
-IMPORTING UNIVERSAL FRAMEWORK TO APP PROJECT 1. Drag universial framework file /DerivedData/{ProjectName}/Build/Products/ Debug-universal/ZDFramework.framework inside App project. 2. Select project main target
+</h5>Importing universal framework to app project </h5> Drag universial framework file /DerivedData/{ProjectName}/Build/Products/ Debug-universal/ZDFramework.framework inside App project. 2. Select project main target
 
 General tab and add framework to Embedded binaries and Linked Frameworks and libraries( ensure that it’s not duplicated) In Build Phases tab check that framework is added to Link Binary with Libraries In Build Settings tab / Framework Search paths / check that path points to currect universial framework file (if same path is duplicated remove one)
 
