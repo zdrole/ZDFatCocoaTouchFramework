@@ -14,19 +14,19 @@ Because of this script makes FAT binary only for develop configuration.(If you w
 In this quick quide you will make universal cocoa touch framework which creates fat build for develop configuraton and is compatible with Xcode 6 and iOS 8. (For release see below)</br>
 <b>IMPORTANT</b>: In Xcode always select Simulator and run, script will make Device and Universal build behind the scenes.(If Device is selected script fails because of “Code=53 Simulator verification failed” error in xcodebuild command. Until Apple don’t fix this issue just build with simulator! )
 
-1.Open Xcode and create fresh Cocoa Touch Framework.
-In project navigator select project / file (menu bar) / project settings / change derived data location to Project-relative with name DerivedData
-Select project / build settings / Build Active Architecture = NO
-Select project / build settings / Arhitectures / Other/ + / add armv7s . Old post : goo.gl/bnKWB5
-Select project / build settings / Valid Architectures / should be arm64 armv7 armv7s
-Create new Xcode aggregate target – (this target /script will delete current build for device and simulator in derivedData! Yes it will be called twice (You need to understand script that makes universal build )
+1. Open Xcode and create fresh Cocoa Touch Framework.
+2. In project navigator select project / file (menu bar) / project settings / change derived data location to Project-relative with name DerivedData
+3. Select project / build settings / Build Active Architecture = NO
+4. Select project / build settings / Arhitectures / Other/ + / add armv7s . Old post : goo.gl/bnKWB5
+5. Select project / build settings / Valid Architectures / should be arm64 armv7 armv7s
+6. Create new Xcode aggregate target – (this target /script will delete current build for device and simulator in derivedData! Yes it will be called twice (You need to understand script that makes universal build )
+  6.1. Select project / + / select iOS / other / Aggregate .. name it DeleteBuildDir
+  6.2. Select main target / build phases / target dependencies / + / select DeleteBuildDir
+  6.3. Select DeleteBuildDir target / Build setttings/ paste code from ZDFrameworkDeleteBuildDataAsAggregateTarget.sh script
 
-Select project / + / select iOS / other / Aggregate .. name it DeleteBuildDir
-Select main target / build phases / target dependencies / + / select DeleteBuildDir
-Select DeleteBuildDir target / Build setttings/ paste code from ZDFrameworkDeleteBuildDataAsAggregateTarget.sh script
-Select project /main target / run script and paste code from ZDFrameworkXcodeScript.sh script – currently this script is executed only when configration=Debug , If you want to make universal Release framework delete [ ${CONFIGURATION} = “Debug”] then” on start and “fi” at end of code. When Making release version via Archive add back this case or comment all script =).
+7. Select project /main target / run script and paste code from ZDFrameworkXcodeScript.sh script – currently this script is executed only when configration=Debug , If you want to make universal Release framework delete [ ${CONFIGURATION} = “Debug”] then” on start and “fi” at end of code. When Making release version via Archive add back this case or comment all script =).
 
-FRAMEWORK SCRIPT BUILD FOLDER Path to Universal,device,simulator frameworks: /DerivedData/{ProjectName}/Build/Products/
+Framework Build Folder path</h5> Path to Universal,device,simulator frameworks: /DerivedData/{ProjectName}/Build/Products/
 
 Making Archive: If you removed put back [ ${CONFIGURATION} = “Debug”] then” on start and “fi” at end of script OR comment all script!.
 
